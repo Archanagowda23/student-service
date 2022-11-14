@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: student-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${DB_USERNAME}
+    url: ${DB_URL}
+    password: ${DB_PASSWORD}
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      naming-strategy: org.hibernate.cfg.improvedNamingStrategy
+      ddl-auto: update
+    show-sql: 'true'
